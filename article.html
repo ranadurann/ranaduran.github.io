@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makale | Aslan Hukuk Danışmanlık</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main.container {
+        padding: 100px 20px 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        flex: 1;
+      }
+
+      article {
+        flex: 1 1 55%;
+        min-width: 300px;
+      }
+
+      article img,
+      .service-card img {
+        max-width: 100%;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 40px 0 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        object-fit: contain;
+      }
+
+      .article-page {
+        padding: 120px 20px 40px;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      #articleContent {
+        flex: 1 1 60%;
+        min-width: 300px;
+      }
+
+      #articleContent img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .contact-box {
+        margin-top: 0; /* Üst boşluk sorunu böyle çözülür */
+        flex: 1 1 30%;
+        background-color: #2a283f;
+        color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .contact-box h2 {
+        color: #e5b34e;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+      }
+
+      .contact-box p {
+        margin: 8px 0;
+        font-size: 1rem;
+      }
+      #articleContent > *:first-child {
+        margin-top: 0 !important;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #222;
+        color: #fff;
+        margin-top: auto;
+      }
+    </style>
+    <script src="script/articles-data.js" defer></script>
+    <script src="script/article.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="main.html">
+            <img
+              src="images/download-removebg-preview.png"
+              alt="Aslan Hukuk Logo"
+              class="site-logo"
+            />
+            Aslan Hukuk Danışmanlık
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="main.html#about">Hakkımızda</a></li>
+          <li><a href="main.html#features">Faaliyet Alanları</a></li>
+          <li><a href="articles.html">Makaleler</a></li>
+          <li><a href="main.html#contact">İletişim</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="article-page">
+      <div class="content-wrapper">
+        <article id="articleContent">
+          <!-- JS ile doldurulacak -->
+        </article>
+
+        <aside class="contact-box">
+          <h2>Bize Ulaşın</h2>
+          <p><strong>Telefon:</strong> +90 555 123 45 67</p>
+          <p><strong>E-posta:</strong> bilgi@aslanhukuk.com</p>
+          <p><strong>Adres:</strong> İzmir, Türkiye</p>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Aslan Hukuk Danışmanlık. Tüm hakları saklıdır.</p>
+      <a
+        href="https://www.instagram.com/aslanhukukdanismanlikk/"
+        target="_blank"
+        class="instagram-icon"
+        aria-label="Instagram"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+          alt="Instagram"
+        />
+      </a>
+    </footer>
+  </body>
+</html>
