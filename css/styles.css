@@ -364,11 +364,14 @@ a {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 1rem;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  box-sizing: border-box;
+  display: block;
+  font-size: clamp(1rem, 2vw, 1.2rem); /* responsive font size */
 }
 
 .contact-heading {
@@ -402,6 +405,14 @@ a {
   text-align: left;
 }
 
+/* Responsive and Scalable Contact Form Styling */
+.contact-form form {
+  width: 90%;
+  max-width: 50rem; /* around 800px but relative */
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
 
 /* Footer */
 footer {
