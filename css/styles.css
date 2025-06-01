@@ -1,7 +1,8 @@
 /* Global Styles */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
+    font-family: 'Merriweather', serif;
+    background-color: #0D1B2A;
+    color: #eaeaea;
     line-height: 1.6;
 }
 html, body {
@@ -49,6 +50,9 @@ a {
 
 /* Navigation Styles */
 .navbar {
+    background-color: #0D1B2A;
+    color: #e5b34e;
+    border-bottom: 2px solid #d4a24c;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +75,8 @@ a {
 .navbar .nav-links {
     list-style: none;
     float: right;
+    color: #eaeaea;
+    font-weight: 600;
 }
 
 .navbar .nav-links li {
@@ -85,21 +91,22 @@ a {
 }
 
 .navbar .nav-links a:hover {
-    color: #e5b34e;
+    color: #d4a24c;
 }
 
 /* Header Section */
 .header {
-  height: 100vh;
-  background-image: url('../images/aslan_header.webp');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    height: 100vh;
+    background-image: url('../images/imageprinc.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-blend-mode: multiply;
+    color: #eaeaea;
 }
 
 .header .overlay {
@@ -124,9 +131,11 @@ a {
 }
 
 .header p {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffffcc;
+    text-shadow: 2px 2px 4px #000;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* About Section */
@@ -450,4 +459,47 @@ footer {
   font-size: 1rem;
   line-height: 1.6;
   color: #666;
+}
+
+.about-title,
+.services-title,
+.contact-heading,
+.Gallery-title,
+.testimonials-title {
+    color: #e5b34e;
+    border-bottom: 3px solid #d4a24c;
+}
+
+.btn,
+.btn-get-in-touch,
+.contact-form button {
+    background-color: #e5b34e;
+    color: #0D1B2A;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn:hover,
+.btn-get-in-touch:hover,
+.contact-form button:hover {
+    background-color: #c29445;
+    transform: scale(1.05);
+}
+
+.service-card, .feature-card {
+    background-color: #1A1A2E;
+    color: #eaeaea;
+    border: 1px solid #d4a24c;
+}
+
+.service-title, .feature-title {
+    color: #e5b34e;
+}
+
+footer {
+    background-color: #0D1B2A;
+    color: #eaeaea;
+    border-top: 1px solid #d4a24c;
 }
