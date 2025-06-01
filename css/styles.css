@@ -4,8 +4,10 @@ body {
   background-color: #1c1a2e;
   color: #ffffff;
   line-height: 1.6;
-  padding-top: 60px; /* navbar yüksekliğiyle aynı olmalı */
+  margin: 0;
+  padding: 0;
 }
+
 html,
 body {
   margin: 0;
@@ -49,25 +51,32 @@ a {
 }
 
 .navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  height: 60px; /* navbar yüksekliğini sabit tut */
+  width: 100vw;
+  height: 60px;
+  min-height: 60px;
+  box-sizing: border-box;
+  background: #1c1a2e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0 24px 0 0; /* Sağdan içeri çeker */
+  align-items: center;
 }
 
 .navbar .logo {
   float: left;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.navbar .nav-links {
-  list-style: none;
-  float: right;
-  color: #eaeaea;
-  font-weight: 600;
 }
 
 .navbar .nav-links li {
@@ -605,23 +614,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar'ın düzgün sabitlenmesi ve içeriğin üstten kaymaması */
-.navbar {
-  position: fixed;
-  width: 100vw; /* Değişti: 100% yerine 100vw daha güvenli */
-  left: 0;
-  top: 0;
-  z-index: 1000;
-  height: 60px; /* Navbar yüksekliği (ayarla!) */
-  min-height: 60px;
-  box-sizing: border-box;
-}
-
-/* Navbar için padding-top ver: */
-body {
-  padding-top: 60px; /* Navbar yüksekliğiyle aynı */
-}
-
 /* Büyük başlıkların taşmasını engelle */
 .about-title,
 .services-title,
@@ -698,4 +690,59 @@ footer,
   color: #fff;
   margin-bottom: 40px;
   text-indent: 2em; /* Paragraf başı girintisi, istersen kaldırabilirsin */
+}
+
+.burger {
+  display: none;
+  width: clamp(32px, 8vw, 44px);
+  height: clamp(32px, 8vw, 44px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 101;
+}
+.burger .line {
+  width: 70%;
+  min-width: 20px;
+  max-width: 32px;
+  height: 4px;
+  background: #e5b34e;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative; /* Bu çok önemli! Sadece relative! */
+  }
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1c1a2e;
+    text-align: right;
+    padding: 24px 16px;
+    gap: 18px;
+    width: 100vw;
+    position: absolute; /* Açılan menü navbarın altına gelsin */
+    top: 60px; /* Navbar yüksekliği kadar aşağıdan başlasın */
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  .navbar .nav-links.open {
+    display: flex;
+  }
+  .burger {
+    display: flex !important;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+    z-index: 101;
+    background: none;
+    border: none;
+  }
 }
