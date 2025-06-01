@@ -679,3 +679,23 @@ footer,
   box-sizing: border-box;
   overflow-x: hidden;
 }
+.about-us {
+  direction: ltr;
+  text-align: justify; /* Paragrafları iki yana yaslar */
+  unicode-bidi: plaintext; /* Her zaman LTR */
+}
+
+.about-title {
+  direction: ltr;
+  text-align: center; /* Başlık ortalı */
+}
+
+.about-description {
+  direction: ltr;
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+  margin-bottom: 40px;
+  text-indent: 2em; /* Paragraf başı girintisi, istersen kaldırabilirsin */
+}
